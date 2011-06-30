@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8C7D57B213BAF0AB0081406A /* TMQuickLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D57B113BAF0AB0081406A /* TMQuickLook.m */; };
-		8C7D57CE13BAF2B90081406A /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7D57CD13BAF2B90081406A /* JRSwizzle.m */; };
 		8C7D582213BAFB990081406A /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7D582113BAFB990081406A /* Quartz.framework */; };
 		8CD2EE0313BD11AA0079327B /* OutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2EE0213BD11AA0079327B /* OutlineView.m */; };
+		8CD2EF8713BD1DBB0079327B /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD2EF5013BD1DAD0079327B /* JRSwizzle.m */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +20,12 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF630370AF2F00C91783 /* TMQuickLook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMQuickLook_Prefix.pch; sourceTree = "<group>"; };
 		8C7D57B113BAF0AB0081406A /* TMQuickLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMQuickLook.m; sourceTree = "<group>"; };
-		8C7D57CC13BAF2B90081406A /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = ../Keystone/JRSwizzle.h; sourceTree = SOURCE_ROOT; };
-		8C7D57CD13BAF2B90081406A /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = ../Keystone/JRSwizzle.m; sourceTree = SOURCE_ROOT; };
 		8C7D582113BAFB990081406A /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		8CD2EE0113BD11AA0079327B /* OutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineView.h; sourceTree = "<group>"; };
 		8CD2EE0213BD11AA0079327B /* OutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineView.m; sourceTree = "<group>"; };
-		8CD2EE7313BD16E40079327B /* SwizzleMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwizzleMacros.h; path = ../Keystone/SwizzleMacros.h; sourceTree = SOURCE_ROOT; };
+		8CD2EF4F13BD1DAD0079327B /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		8CD2EF5013BD1DAD0079327B /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		8CD2EF6613BD1DAD0079327B /* SwizzleMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleMacros.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* TMQuickLook.tmplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMQuickLook.tmplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -79,7 +79,6 @@
 				8C7D57B113BAF0AB0081406A /* TMQuickLook.m */,
 				8CD2EE0113BD11AA0079327B /* OutlineView.h */,
 				8CD2EE0213BD11AA0079327B /* OutlineView.m */,
-				8CD2EE7313BD16E40079327B /* SwizzleMacros.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -114,11 +113,20 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8C7D57CC13BAF2B90081406A /* JRSwizzle.h */,
-				8C7D57CD13BAF2B90081406A /* JRSwizzle.m */,
+				8CD2EF2013BD1DAD0079327B /* JRSwizzle */,
 				32DBCF630370AF2F00C91783 /* TMQuickLook_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8CD2EF2013BD1DAD0079327B /* JRSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				8CD2EF4F13BD1DAD0079327B /* JRSwizzle.h */,
+				8CD2EF5013BD1DAD0079327B /* JRSwizzle.m */,
+				8CD2EF6613BD1DAD0079327B /* SwizzleMacros.h */,
+			);
+			path = JRSwizzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C7D57B213BAF0AB0081406A /* TMQuickLook.m in Sources */,
-				8C7D57CE13BAF2B90081406A /* JRSwizzle.m in Sources */,
 				8CD2EE0313BD11AA0079327B /* OutlineView.m in Sources */,
+				8CD2EF8713BD1DBB0079327B /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
